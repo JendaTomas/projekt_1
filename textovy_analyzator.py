@@ -3,7 +3,7 @@ projekt_1.py: první projekt do Engeto Online Python Akademie
 
 author: Jan Tomáš
 email: jenda.tomas@seznam.cz
-discord: Petr Svetr#4490
+discord: JendaTomas
 """
 TEXTS = ['''
 Situated about 10 miles west of Kemmerer,
@@ -46,14 +46,16 @@ login_user = input("Enter your username: ")
 login_password = input("Enter your password: ")
 
 if login_user in users_password.keys() and login_password in users_password[f"{login_user}"]:
-    print(f"{line}\n Welcome to the app, {login_user} \n{line}")
+    print(f"{line}\nWelcome to the app, {login_user}")
 else:
     print("Unregistered user, terminating the program...")
     quit()
 # choose the text´s number
-text_number= input(f"Enter a number btw.")
-
-
+number_of_texts = len(TEXTS)
+print(f"We have {number_of_texts} texts to be analyzed. \n{line}")
+text_number= int(input(
+    f"Enter a number btw. 1 and {number_of_texts} to selected: "
+    ))
 
 
 
