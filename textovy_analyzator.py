@@ -51,11 +51,19 @@ else:
     print("Unregistered user, terminating the program...")
     quit()
 # choose the text´s number
-number_of_texts = len(TEXTS)
-print(f"We have {number_of_texts} texts to be analyzed. \n{line}")
+quantity_of_texts = len(TEXTS)
+print(f"We have {quantity_of_texts} texts to be analyzed. \n{line}")
 text_number= int(input(
-    f"Enter a number btw. 1 and {number_of_texts} to selected: "
+    f"Enter a number btw. 1 and {quantity_of_texts} to selected: "
     ))
+if text_number > quantity_of_texts:
+    print(f"The entered number must be between 1 and {quantity_of_texts}. Terminating the program..")
+    quit()
+elif text_number != int:
+    print(f"The entered value must be number between 1 and {quantity_of_texts}. Terminating the program")
+    quit()
+else:
+    print(line)
 
 
 
