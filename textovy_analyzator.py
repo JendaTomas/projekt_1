@@ -80,12 +80,17 @@ start_capital=[]
 for object in extracting_words:
     if object[0].isupper() and object.isalpha():
         start_capital.append(object)
-# words with only capital letter
+# words with capital letters only
 only_capital = []
 for object in extracting_words:
     if object.isupper() and object.isalpha():
         only_capital.append(object)
-# 
+# words with lowercase letters only
+only_lowercase=[] 
+for object in extracting_words:
+    if object.islower() and object.isalpha():
+        only_lowercase.append(object)
+print(only_lowercase)
 
 
 
