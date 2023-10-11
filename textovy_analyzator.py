@@ -78,15 +78,14 @@ for object in extracting_words:
 # words start with a capital letter
 start_capital=[]
 for object in extracting_words:
-    if object[0].isupper():
+    if object[0].isupper() and object.isalpha():
         start_capital.append(object)
 # words with only capital letter
 only_capital = []
 for object in extracting_words:
     if object.isupper() and object.isalpha():
         only_capital.append(object)
-print(only_capital)
-
+# 
 
 
 
