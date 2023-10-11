@@ -68,20 +68,24 @@ else:
 choose_text = TEXTS[(int(text_number)-1)]
 extracting_words= []
 for word in choose_text.split():
-    remove_punctuation= word.strip(".,!?")
+    remove_punctuation= word.strip(".,!?:;_@")
     extracting_words.append(remove_punctuation)
 # the number of words in the analyzed text
 words_number = []
 for object in extracting_words:
     if object.isalpha():
         words_number.append(object)
-# the number of words start with a capital letter
+# words start with a capital letter
 start_capital=[]
 for object in extracting_words:
     if object[0].isupper():
         start_capital.append(object)
-
-
+# words with only capital letter
+only_capital = []
+for object in extracting_words:
+    if object.isupper() and object.isalpha():
+        only_capital.append(object)
+print(only_capital)
 
 
 
