@@ -104,6 +104,18 @@ print(f" There are {len(words_number)} words in the selected text.\n",
       f"There are {len(only_lowercase)} lowercase words.\n",
       f"There are {len(number_numeral)} numeric strings.\n",
       f"The sum of all the numbers {suma_numeral}")
+print(line)
+## bar graph
+print("LEN| OCCURENCES  |NR.")
+print(line)
+# length and number of words
+data_graph= {}
+n=1
+for word in extracting_words:
+    if len(word) not in data_graph.keys():
+        data_graph[len(word)] = 1
+    elif len(word) in data_graph.keys():
+        data_graph[len(word)] = data_graph[len(word)] +1 
 
 
  
