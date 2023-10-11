@@ -68,7 +68,7 @@ else:
 choose_text = TEXTS[(int(text_number)-1)]
 extracting_words= []
 for word in choose_text.split():
-    remove_punctuation= word.strip(".,!?:;_@")
+    remove_punctuation= word.strip(".,!?:;_@-")
     extracting_words.append(remove_punctuation)
 # the number of words in the analyzed text
 words_number = []
@@ -86,12 +86,16 @@ for object in extracting_words:
     if object.isupper() and object.isalpha():
         only_capital.append(object)
 # words with lowercase letters only
-only_lowercase=[] 
+only_lowercase= [] 
 for object in extracting_words:
     if object.islower() and object.isalpha():
         only_lowercase.append(object)
-print(only_lowercase)
-
+# number of numeral
+number_numeral= []
+for object in extracting_words:
+    if object.isnumeric():
+        number_numeral.append(object)
+print(number_numeral)
 
 
  
