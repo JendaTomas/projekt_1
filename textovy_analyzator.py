@@ -63,7 +63,14 @@ elif int(text_number) >= 1 and int(text_number) <= quantity_of_texts:
     quit()
 else:
     print(f"The entered number must be between 1 and {quantity_of_texts}. Terminating the program..")
-
+## analyzer text
+# text preparation for analysis 
+choose_text = TEXTS[(text_number)]
+extracting_words= []
+for word in choose_text.split():
+    remove_punctuation= choose_text.strip(".,!?")
+    extracting_words.append(remove_punctuation)
+print(extracting_words)
 
 
 
