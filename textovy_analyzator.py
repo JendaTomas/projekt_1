@@ -94,8 +94,10 @@ for object in extracting_words:
 number_numeral= []
 for object in extracting_words:
     if object.isnumeric():
-        number_numeral.append(object)
-print(number_numeral)
+        number_numeral.append(float(object))
+# sum of numeral
+suma_numeral=sum(number_numeral)
+
 
 
  
