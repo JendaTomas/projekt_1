@@ -68,7 +68,7 @@ else:
 choose_text = TEXTS[(int(text_number)-1)]
 extracting_words= []
 for word in choose_text.split():
-    remove_punctuation= choose_text.strip(".,!?")
+    remove_punctuation= word.strip(".,!?")
     extracting_words.append(remove_punctuation)
 print(extracting_words)
 
