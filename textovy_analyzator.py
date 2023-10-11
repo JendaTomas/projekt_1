@@ -70,7 +70,13 @@ extracting_words= []
 for word in choose_text.split():
     remove_punctuation= word.strip(".,!?")
     extracting_words.append(remove_punctuation)
-print(extracting_words)
+# the number of words in the analyzed text
+words_number = []
+for object in extracting_words:
+    if object.isalpha():
+        words_number.append(object)
+    
+
 
 
 
