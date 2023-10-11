@@ -97,7 +97,13 @@ for object in extracting_words:
         number_numeral.append(float(object))
 # sum of numeral
 suma_numeral=sum(number_numeral)
-
+# writing data
+print(f" There are {len(words_number)} words in the selected text.\n",
+      f"There are {len(start_capital)} titlecase words.\n",
+      f"There are {len(only_capital)} uppercase words.\n",
+      f"There are {len(only_lowercase)} lowercase words.\n",
+      f"There are {len(number_numeral)} numeric strings.\n",
+      f"The sum of all the numbers {suma_numeral}")
 
 
  
