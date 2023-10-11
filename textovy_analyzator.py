@@ -75,7 +75,12 @@ words_number = []
 for object in extracting_words:
     if object.isalpha():
         words_number.append(object)
-    
+# the number of words start with a capital letter
+start_capital=[]
+for object in extracting_words:
+    if object[0].isupper():
+        start_capital.append(object)
+
 
 
 
