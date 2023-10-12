@@ -58,6 +58,7 @@ text_number= input(
     )
 if text_number.isalpha():
     print(f"The entered value must be number between 1 and {quantity_of_texts}. Terminating the program")
+    exit()
 elif int(text_number) >= 1 and int(text_number) <= quantity_of_texts:
     print(line)
     
