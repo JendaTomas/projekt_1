@@ -106,7 +106,7 @@ print(f" There are {len(words_number)} words in the selected text.\n",
       f"The sum of all the numbers {suma_numeral}")
 print(line)
 ## bar graph
-print("LEN| OCCURENCES  |NR.")
+print("LEN |","OCCURENCES",  "|".rjust(10),"NR.")
 print(line)
 # length and number of words
 data_graph= {}
@@ -116,6 +116,10 @@ for word in extracting_words:
         data_graph[len(word)] = 1
     elif len(word) in data_graph.keys():
         data_graph[len(word)] = data_graph[len(word)] +1 
+# sorting keys and print graph
 
-
- 
+for key in sorted(data_graph.keys()):
+    alig= 20-data_graph[key]
+    print(f"{key:>3}","|",
+          f"{'*'* data_graph[key]}",
+           "|".rjust(alig), data_graph[key])
