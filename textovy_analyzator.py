@@ -49,7 +49,7 @@ if login_user in users_password.keys() and login_password in users_password[f"{l
     print(f"{line}\nWelcome to the app, {login_user}")
 else:
     print("Unregistered user, terminating the program...")
-    quit()
+    exit()
 # choose the text´s number
 quantity_of_texts = len(TEXTS)
 print(f"We have {quantity_of_texts} texts to be analyzed. \n{line}")
@@ -64,6 +64,7 @@ elif int(text_number) >= 1 and int(text_number) <= quantity_of_texts:
     
 else:
     print(f"The entered number must be between 1 and {quantity_of_texts}. Terminating the program..")
+    exit()
 ## analyzer text
 # text preparation for analysis 
 choose_text = TEXTS[(int(text_number)-1)]
