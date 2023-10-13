@@ -3,7 +3,7 @@ projekt_1.py: první projekt do Engeto Online Python Akademie
 
 author: Jan Tomáš
 email: jenda.tomas@seznam.cz
-discord: JendaTomas
+discord: jendatomas
 """
 TEXTS = ['''
 Situated about 10 miles west of Kemmerer,
