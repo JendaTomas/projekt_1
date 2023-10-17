@@ -92,15 +92,15 @@ for letter in extracting_words:
         words_number.append(letter)
 
 # words start with a capital letter
-        if letter[0].isupper() and letter.isalpha():
+        if letter[0].isupper():
             start_capital.append(letter)
 
 # words with capital letters only
-            if letter.isupper() and letter.isalpha():
+            if letter.isupper():
                 only_capital.append(letter)
 
 # words with lowercase letters only
-        elif letter.islower() and letter.isalpha():
+        elif letter.islower():
             only_lowercase.append(letter)
 
 # number of numeral
