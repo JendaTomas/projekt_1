@@ -78,34 +78,33 @@ for word in choose_text.split():
     remove_punctuation= word.strip(".,!?:;_@-")
     extracting_words.append(remove_punctuation)
 
-# the number of words in the analyzed text
+
 words_number = []
+start_capital=[]
+only_capital = []
+only_lowercase= [] 
+number_numeral= []
+
 for letter in extracting_words:
+
+# the number of words in the analyzed text
     if letter.isalpha():
         words_number.append(letter)
 
 # words start with a capital letter
-start_capital=[]
-for letter in extracting_words:
-    if letter[0].isupper() and letter.isalpha():
-        start_capital.append(letter)
+        if letter[0].isupper() and letter.isalpha():
+            start_capital.append(letter)
 
 # words with capital letters only
-only_capital = []
-for letter in extracting_words:
-    if letter.isupper() and letter.isalpha():
-        only_capital.append(letter)
+            if letter.isupper() and letter.isalpha():
+                only_capital.append(letter)
 
 # words with lowercase letters only
-only_lowercase= [] 
-for letter in extracting_words:
-    if letter.islower() and letter.isalpha():
-        only_lowercase.append(letter)
+        elif letter.islower() and letter.isalpha():
+            only_lowercase.append(letter)
 
 # number of numeral
-number_numeral= []
-for letter in extracting_words:
-    if letter.isnumeric():
+    elif letter.isnumeric():
         number_numeral.append(float(letter))
 
 # sum of numeral
