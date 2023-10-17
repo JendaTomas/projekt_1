@@ -74,29 +74,29 @@ for word in choose_text.split():
     extracting_words.append(remove_punctuation)
 # the number of words in the analyzed text
 words_number = []
-for object in extracting_words:
-    if object.isalpha():
-        words_number.append(object)
+for letter in extracting_words:
+    if letter.isalpha():
+        words_number.append(letter)
 # words start with a capital letter
 start_capital=[]
-for object in extracting_words:
-    if object[0].isupper() and object.isalpha():
-        start_capital.append(object)
+for letter in extracting_words:
+    if letter[0].isupper() and letter.isalpha():
+        start_capital.append(letter)
 # words with capital letters only
 only_capital = []
-for object in extracting_words:
-    if object.isupper() and object.isalpha():
-        only_capital.append(object)
+for letter in extracting_words:
+    if letter.isupper() and letter.isalpha():
+        only_capital.append(letter)
 # words with lowercase letters only
 only_lowercase= [] 
-for object in extracting_words:
-    if object.islower() and object.isalpha():
-        only_lowercase.append(object)
+for letter in extracting_words:
+    if letter.islower() and letter.isalpha():
+        only_lowercase.append(letter)
 # number of numeral
 number_numeral= []
-for object in extracting_words:
-    if object.isnumeric():
-        number_numeral.append(float(object))
+for letter in extracting_words:
+    if letter.isnumeric():
+        number_numeral.append(float(letter))
 # sum of numeral
 suma_numeral=sum(number_numeral)
 # writing data
