@@ -45,7 +45,7 @@ users_password= {"bob": "123",
 login_user = input("Enter your username: ")
 login_password = input("Enter your password: ")
 
-if login_user in users_password.keys() and login_password in users_password[f"{login_user}"]:
+if login_user in users_password.keys() and login_password == users_password[f"{login_user}"]:
     print(f"{line}\nWelcome to the app, {login_user}")
 else:
     print("Unregistered user, terminating the program...")
